@@ -155,7 +155,7 @@
 
       for (var i = 0; i < rows.length; i++) {
         var index = majorDiagonalColumnIndexAtFirstRow + i;
-        if (index === rows.length) {
+        if (index === rows.length || index < 0) {
           break;
         }
         rowCount += rows[index][i];
@@ -205,7 +205,7 @@
         var index = minorDiagonalColumnIndexAtFirstRow + i;
         var rowIndex = rows.length - 1 - i;
         
-        if (index === rows.length) {
+        if (index === rows.length || index > rows.length - 1) {
           break;
         }
         firstCount += rows[index][rowIndex];
@@ -238,7 +238,7 @@
       }
 
       return false;
-    }
+    },
 
     /*--------------------  End of Helper Functions  ---------------------*/
 
