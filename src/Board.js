@@ -85,7 +85,6 @@
       for (var i = 0; i < row.length; i++) {
         count += row[i];
         if (count > 1) {
-          console.log('got here')
           return true;
         }
       }
